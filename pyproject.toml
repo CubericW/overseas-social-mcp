@@ -1,0 +1,31 @@
+[project]
+name = "overseas-social-mcp"
+version = "0.1.0"
+description = "MCP server unifying public-data collection from X, Reddit, Telegram and LinkedIn (personal/research use only)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "mcp>=1.2.0,<2",
+]
+
+[project.optional-dependencies]
+x = ["twscrape>=0.13"]
+reddit = ["praw>=7.7"]
+telegram = ["telethon>=1.34"]
+linkedin = ["linkedin_scraper>=2.11", "selenium>=4.0"]
+all = ["twscrape>=0.13", "praw>=7.7", "telethon>=1.34", "linkedin_scraper>=2.11", "selenium>=4.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+overseas-social-mcp = "overseas_social_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["overseas_social_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

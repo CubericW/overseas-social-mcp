@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "overseas-social": {
+      "command": "python",
+      "args": ["-m", "overseas_social_mcp.server"],
+      "env": {
+        "PYTHONPATH": "/absolute/path/to/overseas-social-mcp",
+        "OSMCP_X_ENABLED": "true",
+        "OSMCP_X_ACCOUNTS_DB": "/absolute/path/to/accounts.db",
+        "OSMCP_REDDIT_CLIENT_ID": "your_client_id",
+        "OSMCP_REDDIT_CLIENT_SECRET": "your_client_secret",
+        "OSMCP_REDDIT_USER_AGENT": "overseas-social-mcp/0.1 by research",
+        "OSMCP_TG_API_ID": "1234567",
+        "OSMCP_TG_API_HASH": "your_api_hash",
+        "OSMCP_TG_SESSION": "/absolute/path/to/overseas_social_mcp.session",
+        "OSMCP_LINKEDIN_ENABLED": "false",
+        "OSMCP_DEFAULT_MAX": "20",
+        "OSMCP_MAX_HARD_LIMIT": "100",
+        "OSMCP_RATE_CALLS": "20",
+        "OSMCP_RATE_WINDOW": "600"
+      }
+    }
+  }
+}
